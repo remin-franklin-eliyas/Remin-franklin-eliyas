@@ -1,89 +1,150 @@
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:185FA5,100:1D9E75&height=200&section=header&text=Remin%20Franklin%20Eliyas&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=AI%20Engineer%20%7C%20LLM%20Evaluation%20%7C%20Generative%20AI&descAlignY=58&descSize=18" />
+</div>
+
 <div align="center">
 
-<!-- Typing animation -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=378ADD&center=true&vCenter=true&width=600&lines=Hi%2C+I'm+Remin+Franklin+Eliyas;AI+Engineer+%7C+LLM+Evaluation+%7C+GenAI;Building+things+that+actually+work+in+production)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=378ADD&center=true&vCenter=true&width=650&lines=Building+AI+that+works+in+production+%F0%9F%9A%80;MSc+Data+Science+%7C+Cardiff+University+%F0%9F%8F%B4%F0%9F%8F%B4%F0%9F%8F%B4;LLM+Evaluation+%7C+Document+Intelligence+%7C+RAG;Currently+open+to+roles+in+Bangalore+%2F+Chennai)](https://git.io/typing-svg)
 
 </div>
 
 ---
 
-### About me
+## 👋 Know More About Me
 
-I'm an AI Engineer based in India, focused on building production-grade document intelligence and LLM evaluation systems. Most recently I spent 3 months at a UK AI startup building a multi-model benchmarking framework from the ground up — evaluating 10+ LLMs and OCR engines on real manufacturing certificates, shipping a FastAPI service, and running CI/CD pipelines that actually held up under production load.
+🔭 &nbsp;I recently built a **multi-model benchmarking framework** evaluating 10+ LLMs on real industrial certificates at a UK AI startup — from scratch, independently, in production.
 
-MSc in Data Science and Analytics from Cardiff University (Merit). I care about rigorous evaluation, clean APIs, and AI systems that do what they claim to do.
+🎓 &nbsp;MSc Data Science and Analytics — **Cardiff University, UK** (Merit)
 
-Currently open to AI Engineer and GenAI Engineer roles in **Bangalore** or **Chennai**.
+🧠 &nbsp;I'm currently deepening my work in **RAG pipelines, agentic AI, and LLM evaluation frameworks**
 
----
+💼 &nbsp;Actively looking for **AI Engineer / GenAI Engineer** roles in **Bangalore or Chennai**
 
-### What I have built
+🏎️ &nbsp;When I'm not building AI systems, I'm watching **Formula 1** — specifically the aerodynamic chess match that makes strategy more interesting than the racing itself. The Red Bull era was something else.
 
-| Project | What it does | Stack |
-|---|---|---|
-| [MTC Extraction Benchmark](https://github.com/remin-franklin-eliyas) | Benchmarks 10+ LLMs on structured extraction from Mill Test Certificates. Three-tier hybrid routing pipeline. +233% improvement over rule-based baseline. | Python, FastAPI, GitHub Actions, PaddleOCR, OpenAI API |
-| [F1 Forecast](https://github.com/remin-franklin-eliyas) | Race strategy simulator with live leaderboard. Real F1 data ingestion, deployed on GitHub Pages. | Python, JavaScript, FastF1, Supabase |
-| [NHS No-Show Classifier](https://github.com/remin-franklin-eliyas) | End-to-end ML pipeline predicting patient no-shows for NHS scheduling efficiency. XGBoost, SMOTE, SHAP. | Python, scikit-learn, XGBoost |
-| [Sentiment Analysis with BERT](https://github.com/remin-franklin-eliyas) | Fine-tuned BERT for product review sentiment classification. Strong F1 with attention weight interpretability. | Python, PyTorch, HuggingFace |
+🎬 &nbsp;Writing screenplays on the side. Scene structure and system design have more in common than people think.
 
----
+📍 &nbsp;Based in **Coimbatore, India**
 
-### Tech stack
-
-**AI / ML**
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
-![OpenAI](https://img.shields.io/badge/OpenAI_API-412991?style=flat-square&logo=openai&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
-
-**Engineering**
-
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
-
-**LLM ecosystem**
-
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
-![RAG](https://img.shields.io/badge/RAG-378ADD?style=flat-square&logoColor=white)
-![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=flat-square&logo=pydantic&logoColor=white)
-![Azure AI](https://img.shields.io/badge/Azure_AI-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+⚡ &nbsp;Fun fact: I once shipped a FastAPI service, a CI/CD pipeline, and a full benchmarking framework in the same sprint. Alone. In a startup.
 
 ---
 
-### GitHub stats
+## 🛠️ Tech Stack
+
+**Languages**
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+**AI / ML / LLM**
+
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![HuggingFace](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![OpenAI](https://img.shields.io/badge/OpenAI_API-412991?style=for-the-badge&logo=openai&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
+
+**Engineering and Cloud**
+
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure_AI-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
+
+---
+
+## 🚀 Featured Projects
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🏭 MTC Extraction Benchmark</h3>
+      <p>Production benchmarking framework evaluating 10+ LLMs and OCR engines on real Mill Test Certificates for steel manufacturing.</p>
+      <p><strong>+233%</strong> extraction improvement &nbsp;|&nbsp; <strong>1,500+</strong> lines of production Python &nbsp;|&nbsp; Three-tier hybrid routing pipeline</p>
+      <p>
+        <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
+        <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
+        <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white" />
+      </p>
+      <a href="https://github.com/remin-franklin-eliyas">View repo →</a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🏎️ F1 Forecast</h3>
+      <p>Race strategy prediction simulator with a live multiplayer leaderboard. Real F1 data ingestion via FastF1. Deployed and live with real users on day one.</p>
+      <p><strong>Live on GitHub Pages</strong> &nbsp;|&nbsp; Supabase leaderboard &nbsp;|&nbsp; Real race data</p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+        <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white" />
+        <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+      </p>
+      <a href="https://github.com/remin-franklin-eliyas">View repo →</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>🏥 NHS No-Show Classifier</h3>
+      <p>MSc dissertation — end-to-end classification pipeline predicting patient no-shows for NHS scheduling. XGBoost, SMOTE, SHAP interpretability.</p>
+      <p>
+        <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" />
+        <img src="https://img.shields.io/badge/XGBoost-FF6600?style=flat-square&logoColor=white" />
+      </p>
+      <a href="https://github.com/remin-franklin-eliyas">View repo →</a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>🤖 Sentiment Analysis with BERT</h3>
+      <p>Fine-tuned BERT transformer for product review sentiment classification. Transfer learning with attention weight interpretability.</p>
+      <p>
+        <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
+        <img src="https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black" />
+      </p>
+      <a href="https://github.com/remin-franklin-eliyas">View repo →</a>
+    </td>
+  </tr>
+</table>
+
+---
+
+## 📊 GitHub Stats
 
 <div align="center">
 
-![Remin's GitHub stats](https://github-readme-stats.vercel.app/api?username=remin-franklin-eliyas&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=remin-franklin-eliyas&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" />
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=remin-franklin-eliyas&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" />
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=remin-franklin-eliyas&layout=compact&theme=tokyonight&hide_border=true)
+</div>
+
+<div align="center">
+
+[![GitHub Streak](https://streak-stats.demolab.com?user=remin-franklin-eliyas&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
 
 </div>
 
 ---
 
-### A bit more about me
+## 🏆 Certifications
 
-- Coimbatore, India — grew up here, came back after an MSc and a production AI internship in the UK
-- Quietly obsessed with Formula 1 — specifically the aerodynamic chess match that makes racing strategy more interesting than the racing itself. Red Bull Racing era has been something else.
-- Writing screenplays on the side. There is something about the discipline of scene structure that makes system design cleaner — both are about knowing exactly what information to withhold.
-- Currently building: a two-car F1 strategy simulation modelling the 2026 regulation changes (no DRS, MOM aero)
+- 🟢 &nbsp;**NVIDIA** — Fundamentals of Accelerated Computing with CUDA C/C++
+- 🔵 &nbsp;**Lloyds Banking Group** — Data Science Job Simulation (Forage)
+- 🔵 &nbsp;**British Airways** — Data Science Job Simulation (Forage)
 
 ---
 
-### Get in touch
+## 📬 Connect with Me
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/remin-franklin-eliyas)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:reminfranklin@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/remin-franklin-eliyas)
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/remin-franklin-eliyas)
+[![Email](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:reminfranklin@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/remin-franklin-eliyas)
+
+</div>
 
 ---
 
 <div align="center">
-<sub>Open to AI Engineer and GenAI Engineer roles — Bangalore / Chennai / Remote</sub>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1D9E75,100:185FA5&height=100&section=footer" />
 </div>
