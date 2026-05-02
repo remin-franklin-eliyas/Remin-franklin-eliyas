@@ -108,24 +108,6 @@
 
 ---
 
-## 📊 GitHub Stats
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=remin-franklin-eliyas&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Remin's GitHub Stats" />
-
-<br/>
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=remin-franklin-eliyas&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
-
-<br/>
-
-<img src="https://streak-stats.demolab.com?user=remin-franklin-eliyas&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
-
-</div>
-
----
-
 ## 🏆 Certifications
 
 - 🟢 &nbsp;**NVIDIA** — Fundamentals of Accelerated Computing with CUDA C/C++
