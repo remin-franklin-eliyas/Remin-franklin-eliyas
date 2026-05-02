@@ -112,14 +112,15 @@
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=remin-franklin-eliyas&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" />
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=remin-franklin-eliyas&layout=compact&theme=tokyonight&hide_border=true&langs_count=6" />
+<img src="https://github-readme-stats.vercel.app/api?username=remin-franklin-eliyas&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Remin's GitHub Stats" />
 
-</div>
+<br/>
 
-<div align="center">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=remin-franklin-eliyas&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=remin-franklin-eliyas&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
+<br/>
+
+<img src="https://streak-stats.demolab.com?user=remin-franklin-eliyas&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
 
 </div>
 
