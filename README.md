@@ -12,7 +12,7 @@
 
 ## 👋 About Me
 
-🚀 &nbsp;I'm the founder of **[EvalHire](https://evalhire.com)** — an agentic AI CV screening platform for startup founders. Built and shipped from zero to live product in under 24 hours.
+🚀 &nbsp;I'm the founder of **[EvalHire]** — an agentic AI CV screening platform for startup founders. Built and shipped from zero to live product in under 24 hours.
 
 🔭 &nbsp;Previously built a **multi-model benchmarking framework** evaluating 10+ LLMs on real industrial certificates at a UK AI startup — from scratch, independently, in production.
 
