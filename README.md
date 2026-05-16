@@ -42,7 +42,6 @@
         <img src="https://img.shields.io/badge/Railway-0B0D0E?style=flat-square&logo=railway&logoColor=white" />
         <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" />
       </p>
-      <a href="https://evalhire.com">evalhire.com →</a>
     </td>
     <td width="50%" valign="top">
       <h3>🏭 MTC Extraction Benchmark</h3>
