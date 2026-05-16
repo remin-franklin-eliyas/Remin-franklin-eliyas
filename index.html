@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Remin Franklin Eliyas — AI Engineer</title>
+<title>Remin Franklin Eliyas — AI Engineer & Founder</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet" />
 <style>
@@ -34,7 +34,6 @@
     overflow-x: hidden;
   }
 
-  /* noise overlay */
   body::before {
     content: '';
     position: fixed;
@@ -45,7 +44,6 @@
     opacity: 0.4;
   }
 
-  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -64,12 +62,14 @@
     font-size: 13px;
     color: var(--green);
     letter-spacing: 0.05em;
+    text-decoration: none;
   }
 
   .nav-links {
     display: flex;
     gap: 2.5rem;
     list-style: none;
+    align-items: center;
   }
 
   .nav-links a {
@@ -84,7 +84,24 @@
 
   .nav-links a:hover { color: var(--text); }
 
-  /* HERO */
+  .nav-evalhire {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--green) !important;
+    border: 1px solid var(--green);
+    padding: 6px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: all 0.2s !important;
+  }
+
+  .nav-evalhire:hover {
+    background: var(--green) !important;
+    color: #fff !important;
+  }
+
   #hero {
     min-height: 100vh;
     display: flex;
@@ -133,6 +150,34 @@
     background: var(--green);
   }
 
+  .founder-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--green);
+    background: rgba(29,158,117,0.1);
+    border: 1px solid rgba(29,158,117,0.3);
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  .founder-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
   h1 {
     font-family: var(--sans);
     font-size: clamp(3rem, 7vw, 5.5rem);
@@ -171,21 +216,20 @@
     transition: all 0.2s;
     cursor: pointer;
     border: none;
+    display: inline-block;
   }
 
-  .btn-primary {
-    background: var(--blue);
-    color: #fff;
-  }
-
+  .btn-primary { background: var(--blue); color: #fff; }
   .btn-primary:hover { background: #4a99ee; transform: translateY(-1px); }
+
+  .btn-green { background: var(--green); color: #fff; }
+  .btn-green:hover { background: #23b887; transform: translateY(-1px); }
 
   .btn-outline {
     background: transparent;
     color: var(--text);
     border: 1px solid var(--border2);
   }
-
   .btn-outline:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-1px); }
 
   .hero-stats {
@@ -196,7 +240,6 @@
     border-top: 1px solid var(--border);
   }
 
-  .stat-item {}
   .stat-num {
     font-family: var(--mono);
     font-size: 1.6rem;
@@ -204,6 +247,7 @@
     color: var(--blue);
     display: block;
   }
+
   .stat-label {
     font-size: 12px;
     color: var(--muted);
@@ -211,7 +255,6 @@
     letter-spacing: 0.05em;
   }
 
-  /* SECTIONS */
   section {
     padding: 6rem 3rem;
     max-width: 1100px;
@@ -235,6 +278,72 @@
     letter-spacing: -0.02em;
     margin-bottom: 3rem;
     line-height: 1.1;
+  }
+
+  /* EVALHIRE SPOTLIGHT */
+  .evalhire-spotlight {
+    background: linear-gradient(135deg, rgba(29,158,117,0.08) 0%, rgba(55,138,221,0.05) 100%);
+    border: 1px solid rgba(29,158,117,0.25);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .evalhire-spotlight-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--green);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  .evalhire-spotlight h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+  }
+
+  .evalhire-spotlight p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 580px;
+    margin-bottom: 1.25rem;
+  }
+
+  .evalhire-metrics {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+
+  .eh-metric-num {
+    font-family: var(--mono);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--green);
+    display: block;
+  }
+
+  .eh-metric-label {
+    font-size: 11px;
+    color: var(--muted);
+    font-family: var(--mono);
+  }
+
+  .evalhire-cta { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
+
+  .evalhire-live {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.08em;
   }
 
   /* ABOUT */
@@ -263,6 +372,8 @@
     padding: 1.25rem 1.5rem;
   }
 
+  .aside-card.highlight { border-color: rgba(29,158,117,0.3); background: rgba(29,158,117,0.05); }
+
   .aside-card-label {
     font-family: var(--mono);
     font-size: 10px;
@@ -278,12 +389,7 @@
     line-height: 1.6;
   }
 
-  .tag-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 1.5rem;
-  }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 1.5rem; }
 
   .tag {
     font-family: var(--mono);
@@ -297,8 +403,6 @@
   }
 
   /* PROJECTS */
-  #projects { background: none; }
-
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -318,10 +422,7 @@
     color: inherit;
   }
 
-  .project-card:hover {
-    border-color: var(--blue);
-    transform: translateY(-3px);
-  }
+  .project-card:hover { border-color: var(--blue); transform: translateY(-3px); }
 
   .project-card.featured {
     grid-column: span 2;
@@ -331,10 +432,7 @@
     align-items: center;
   }
 
-  .project-icon {
-    font-size: 1.5rem;
-    margin-bottom: 0.25rem;
-  }
+  .project-icon { font-size: 1.5rem; margin-bottom: 0.25rem; }
 
   .project-title {
     font-size: 1.1rem;
@@ -343,18 +441,9 @@
     margin-bottom: 0.25rem;
   }
 
-  .project-desc {
-    font-size: 14px;
-    color: var(--muted);
-    line-height: 1.7;
-    flex: 1;
-  }
+  .project-desc { font-size: 14px; color: var(--muted); line-height: 1.7; flex: 1; }
 
-  .project-metrics {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
+  .project-metrics { display: flex; flex-direction: column; gap: 0.75rem; }
 
   .metric-line {
     display: flex;
@@ -364,20 +453,10 @@
     font-size: 13px;
   }
 
-  .metric-num {
-    color: var(--blue);
-    font-weight: 700;
-    min-width: 60px;
-  }
-
+  .metric-num { color: var(--blue); font-weight: 700; min-width: 60px; }
   .metric-desc { color: var(--muted); font-size: 12px; }
 
-  .project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: auto;
-  }
+  .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
 
   .project-link {
     font-family: var(--mono);
@@ -415,11 +494,7 @@
     margin-bottom: 1rem;
   }
 
-  .skill-list {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
+  .skill-list { display: flex; flex-direction: column; gap: 6px; }
 
   .skill-item {
     font-size: 13px;
@@ -455,11 +530,7 @@
 
   .contact-text strong { color: var(--text); }
 
-  .contact-links {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
+  .contact-links { display: flex; flex-direction: column; gap: 1rem; }
 
   .contact-link {
     display: flex;
@@ -474,18 +545,10 @@
     transition: border-color 0.2s, transform 0.2s;
   }
 
-  .contact-link:hover {
-    border-color: var(--blue);
-    transform: translateX(4px);
-  }
+  .contact-link:hover { border-color: var(--blue); transform: translateX(4px); }
 
-  .contact-link-icon {
-    font-size: 1.1rem;
-    width: 32px;
-    text-align: center;
-  }
+  .contact-link-icon { font-size: 1.1rem; width: 32px; text-align: center; }
 
-  .contact-link-body {}
   .contact-link-label {
     font-family: var(--mono);
     font-size: 10px;
@@ -493,12 +556,9 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
-  .contact-link-val {
-    font-size: 14px;
-    color: var(--text);
-  }
 
-  /* FOOTER */
+  .contact-link-val { font-size: 14px; color: var(--text); }
+
   footer {
     border-top: 1px solid var(--border);
     padding: 2rem 3rem;
@@ -514,21 +574,17 @@
 
   .footer-right { color: var(--green); }
 
-  /* ANIMATIONS */
   .fade-up {
     opacity: 0;
     transform: translateY(24px);
     transition: opacity 0.6s ease, transform 0.6s ease;
   }
 
-  .fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
 
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
-    .nav-links { gap: 1.5rem; }
+    .nav-links { gap: 1rem; }
     #hero { padding: 7rem 1.5rem 3rem; }
     section { padding: 4rem 1.5rem; }
     .about-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -536,40 +592,49 @@
     .project-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
     .skills-grid { grid-template-columns: 1fr 1fr; }
     .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
-    .hero-stats { gap: 2rem; }
+    .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+    .evalhire-spotlight { grid-template-columns: 1fr; }
+    .evalhire-metrics { gap: 1.5rem; flex-wrap: wrap; }
     footer { flex-direction: column; gap: 0.5rem; text-align: center; }
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <div class="nav-logo">remin.dev</div>
+  <a class="nav-logo" href="#">remin.dev</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="https://evalhire.com" target="_blank" class="nav-evalhire">EvalHire ↗</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <div class="hero-glow"></div>
   <div class="hero-glow2"></div>
   <div class="hero-inner">
-    <div class="hero-tag">Available for roles in Bangalore / Chennai</div>
+    <div class="founder-badge">Founder, EvalHire — evalhire.com</div>
+    <div class="hero-tag">AI Engineer — open to Bangalore / Chennai</div>
     <h1>Remin<br/>Franklin<br/><span class="accent">Eliyas.</span></h1>
     <p class="hero-sub">
-      <strong>AI Engineer</strong> specialising in LLM evaluation, document intelligence, and GenAI systems.
-      Built production pipelines at a UK AI startup. MSc Data Science, Cardiff University.
+      <strong>AI Engineer</strong> specialising in agentic AI systems, LLM evaluation, and document intelligence.
+      Founded EvalHire — shipped from zero to live product in 24 hours.
+      Previously built production pipelines at a UK AI startup.
+      MSc Data Science, Cardiff University.
     </p>
     <div class="hero-cta">
+      <a href="https://evalhire.com" target="_blank" class="btn btn-green">Try EvalHire →</a>
       <a href="Remin_Franklin_Eliyas_CV.pdf" download class="btn btn-primary">Download CV</a>
       <a href="#projects" class="btn btn-outline">View Projects</a>
     </div>
     <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">24hrs</span>
+        <span class="stat-label">Zero to live product</span>
+      </div>
       <div class="stat-item">
         <span class="stat-num">+233%</span>
         <span class="stat-label">Extraction improvement</span>
@@ -586,30 +651,33 @@
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="section-tag">// about</div>
   <h2>Who I am</h2>
   <div class="about-grid">
     <div class="about-text fade-up">
       <p>
-        I'm an AI Engineer based in <strong>Coimbatore, India</strong>, focused on building production-grade
-        LLM systems that actually hold up under real-world load. Most recently I spent 3 months at
-        <strong>GoSmarter AI</strong> in Cardiff — a UK startup building document intelligence for steel
-        manufacturing — where I designed and shipped a full benchmarking framework, hybrid extraction
-        pipeline, FastAPI service, and CI/CD setup from scratch, independently.
+        I'm an AI Engineer and founder based in <strong>Coimbatore, India</strong>. I founded
+        <strong>EvalHire</strong> — an agentic AI CV screening platform for startup founders —
+        and shipped it from zero to a live deployed product with user accounts, batch processing,
+        evaluation history, and a custom domain in under 24 hours.
       </p>
       <p>
-        I hold an <strong>MSc in Data Science and Analytics (Merit)</strong> from Cardiff University and
-        a BEng in Electronics and Communication Engineering. I care about rigorous evaluation, clean APIs,
-        and AI systems that do what they claim to do.
+        Before that, I spent 3 months at <strong>GoSmarter AI</strong> in Cardiff — a UK startup
+        building document intelligence for steel manufacturing — where I designed and shipped a full
+        multi-model benchmarking framework, three-tier hybrid extraction pipeline, FastAPI service,
+        and CI/CD setup from scratch, independently.
       </p>
       <p>
-        When I'm not building, I'm watching <strong>Formula 1</strong> — specifically the aerodynamic
-        chess match that makes strategy more interesting than the racing itself. I also write screenplays
-        on the side. Scene structure and system design have more in common than people think.
+        I hold an <strong>MSc in Data Science and Analytics (Merit)</strong> from Cardiff University.
+        I care about rigorous LLM evaluation, clean system design, and AI that ships.
+      </p>
+      <p>
+        When I'm not building: <strong>Formula 1</strong> strategy, screenplays, and the surprising
+        overlap between scene structure and system design.
       </p>
       <div class="tag-row">
+        <span class="tag">Agentic AI</span>
         <span class="tag">LLM Evaluation</span>
         <span class="tag">RAG Pipelines</span>
         <span class="tag">Document AI</span>
@@ -621,6 +689,10 @@
       </div>
     </div>
     <div class="about-aside fade-up">
+      <div class="aside-card highlight">
+        <div class="aside-card-label">Currently Building</div>
+        <div class="aside-card-val" style="color:var(--green)">EvalHire — evalhire.com<br/><span style="color:var(--muted);font-size:13px">Agentic AI CV screening for startup founders</span></div>
+      </div>
       <div class="aside-card">
         <div class="aside-card-label">Education</div>
         <div class="aside-card-val">MSc Data Science and Analytics<br/><span style="color:var(--muted);font-size:13px">Cardiff University, UK — Merit (2024–2025)</span></div>
@@ -633,34 +705,61 @@
         <div class="aside-card-label">Location</div>
         <div class="aside-card-val">Coimbatore, India<br/><span style="color:var(--muted);font-size:13px">Open to Bangalore / Chennai relocation</span></div>
       </div>
-      <div class="aside-card">
-        <div class="aside-card-label">Currently targeting</div>
-        <div class="aside-card-val" style="color:var(--green)">AI Engineer / GenAI Engineer roles</div>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
   <div class="section-tag">// projects</div>
   <h2>What I have built</h2>
-  <div class="projects-grid">
 
-    <!-- Featured -->
+  <!-- EvalHire Spotlight -->
+  <div class="evalhire-spotlight fade-up">
+    <div>
+      <div class="evalhire-spotlight-label">🟢 Live Product — Founded May 2026</div>
+      <h3>EvalHire — Agentic CV Screening</h3>
+      <p>
+        Paste a job description, upload CVs, get back a ranked shortlist with fit scores, 3-bullet reasoning,
+        and candidate contact details — in under 60 seconds. Configurable LLM personas: Founding CTO,
+        VP Sales, Design Lead, or custom. User accounts, evaluation history, batch processing.
+        Built solo from zero to production in under 24 hours.
+      </p>
+      <div class="evalhire-metrics">
+        <div>
+          <span class="eh-metric-num">24hrs</span>
+          <span class="eh-metric-label">zero to deployed</span>
+        </div>
+        <div>
+          <span class="eh-metric-num">5+</span>
+          <span class="eh-metric-label">persona presets</span>
+        </div>
+        <div>
+          <span class="eh-metric-num">∞</span>
+          <span class="eh-metric-label">CVs per batch</span>
+        </div>
+      </div>
+    </div>
+    <div class="evalhire-cta">
+      <a href="https://evalhire.com" target="_blank" class="btn btn-green">Try EvalHire →</a>
+      <a href="https://github.com/remin-franklin-eliyas/evalhire-engine" target="_blank" class="project-link">View on GitHub →</a>
+      <span class="evalhire-live">evalhire.com · live in production</span>
+    </div>
+  </div>
+
+  <div class="projects-grid">
     <div class="project-card featured fade-up">
       <div>
         <div class="project-icon">🏭</div>
         <div class="project-title">MTC Extraction Benchmark</div>
         <p class="project-desc">
           Production benchmarking framework evaluating 10+ LLMs and OCR engines on real Mill Test
-          Certificates for steel manufacturing. Built independently at GoSmarter AI — publicly available on GitHub.
+          Certificates for steel manufacturing. Built independently at GoSmarter AI.
           Three-tier hybrid routing pipeline, automated CI/CD, and FastAPI REST service from scratch.
         </p>
         <div class="project-tags">
           <span class="tag">FastAPI</span>
           <span class="tag">GitHub Actions</span>
-          <span class="tag">OpenAI API</span>
+          <span class="tag">Azure AI</span>
           <span class="tag">PaddleOCR</span>
           <span class="tag">HuggingFace</span>
           <span class="tag">Docker</span>
@@ -670,11 +769,11 @@
       <div class="project-metrics">
         <div class="metric-line">
           <span class="metric-num">+233%</span>
-          <span class="metric-desc">heat number extraction improvement vs rule-based baseline</span>
+          <span class="metric-desc">heat number extraction vs rule-based baseline</span>
         </div>
         <div class="metric-line">
           <span class="metric-num">+38%</span>
-          <span class="metric-desc">test sample coverage gain (58 to 80 rows)</span>
+          <span class="metric-desc">test sample coverage gain (58 → 80 rows)</span>
         </div>
         <div class="metric-line">
           <span class="metric-num">10+</span>
@@ -686,7 +785,7 @@
         </div>
         <div class="metric-line">
           <span class="metric-num">8</span>
-          <span class="metric-desc">systematic failure modes uncovered and resolved</span>
+          <span class="metric-desc">systematic failure modes resolved</span>
         </div>
       </div>
     </div>
@@ -695,9 +794,9 @@
       <div class="project-icon">🏎️</div>
       <div class="project-title">F1 Forecast</div>
       <p class="project-desc">
-        Race strategy prediction simulator with a live multiplayer leaderboard.
+        Race strategy prediction simulator with live multiplayer leaderboard.
         Real F1 data ingestion via FastF1. Deployed on GitHub Pages with Supabase backend.
-        Attracted real users on day one of launch.
+        Real users on day one of launch.
       </p>
       <div class="project-tags">
         <span class="tag">Python</span>
@@ -713,7 +812,8 @@
       <div class="project-title">NHS No-Show Classifier</div>
       <p class="project-desc">
         MSc dissertation — end-to-end classification pipeline predicting patient no-shows
-        for NHS scheduling efficiency. XGBoost, SMOTE class balancing, SHAP interpretability.
+        for NHS scheduling. XGBoost, SMOTE class balancing, SHAP interpretability.
+        Compared 4 classifiers with full evaluation pipeline.
       </p>
       <div class="project-tags">
         <span class="tag">scikit-learn</span>
@@ -723,35 +823,17 @@
       </div>
       <a href="https://github.com/remin-franklin-eliyas" class="project-link" target="_blank">View on GitHub →</a>
     </div>
-
-    <div class="project-card fade-up">
-      <div class="project-icon">🤖</div>
-      <div class="project-title">Sentiment Analysis with BERT</div>
-      <p class="project-desc">
-        Fine-tuned BERT transformer for product review sentiment classification.
-        Transfer learning with attention weight interpretability for explainability.
-      </p>
-      <div class="project-tags">
-        <span class="tag">PyTorch</span>
-        <span class="tag">HuggingFace</span>
-        <span class="tag">BERT</span>
-        <span class="tag">NLP</span>
-      </div>
-      <a href="https://github.com/remin-franklin-eliyas" class="project-link" target="_blank">View on GitHub →</a>
-    </div>
-
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="section-tag">// skills</div>
   <h2>Tech stack</h2>
   <div class="skills-grid fade-up">
     <div class="skill-group">
-      <div class="skill-group-title">AI / ML / LLM</div>
+      <div class="skill-group-title">AI / Agentic Systems</div>
       <div class="skill-list">
-        <span class="skill-item">Generative AI</span>
+        <span class="skill-item">Agentic AI</span>
         <span class="skill-item">LLM Evaluation</span>
         <span class="skill-item">RAG Pipelines</span>
         <span class="skill-item">Prompt Engineering</span>
@@ -770,66 +852,75 @@
         <span class="skill-item">LangChain</span>
         <span class="skill-item">Docker</span>
         <span class="skill-item">GitHub Actions</span>
-        <span class="skill-item">REST APIs</span>
+        <span class="skill-item">SQLAlchemy / PostgreSQL</span>
+        <span class="skill-item">JWT Auth / bcrypt</span>
         <span class="skill-item">Pydantic</span>
         <span class="skill-item">pytest / ruff</span>
-        <span class="skill-item">SQL / JavaScript</span>
       </div>
     </div>
     <div class="skill-group">
       <div class="skill-group-title">APIs and Cloud</div>
       <div class="skill-list">
+        <span class="skill-item">Anthropic API</span>
         <span class="skill-item">OpenAI API</span>
-        <span class="skill-item">HuggingFace</span>
-        <span class="skill-item">GitHub Models</span>
         <span class="skill-item">Azure AI</span>
+        <span class="skill-item">HuggingFace</span>
         <span class="skill-item">AWS</span>
+        <span class="skill-item">Railway</span>
+        <span class="skill-item">Supabase</span>
         <span class="skill-item">OCR (PaddleOCR, Tesseract, DocTR)</span>
         <span class="skill-item">OpenCV</span>
-        <span class="skill-item">Supabase</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="section-tag">// contact</div>
   <h2>Get in touch</h2>
   <div class="contact-inner fade-up">
     <div class="contact-text">
       <p>
-        I'm actively looking for <strong>AI Engineer and GenAI Engineer roles</strong> in
-        Bangalore or Chennai. Open to remote roles with UK or EU-based companies too.
+        I'm the founder of <strong>EvalHire</strong> and actively looking for
+        <strong>AI Engineer / GenAI Engineer roles</strong> in Bangalore or Chennai.
+        Open to remote roles with UK or EU-based companies too.
       </p>
       <p>
-        If you're building something interesting in document AI, LLM evaluation, or GenAI
-        infrastructure — I'd like to hear about it.
+        If you're building something interesting in agentic AI, document intelligence,
+        or LLM evaluation — or if you want to try EvalHire for your next hire — I'd like to hear from you.
       </p>
-      <a href="Remin_Franklin_Eliyas_CV.pdf" download class="btn btn-primary" style="display:inline-block;margin-top:1rem">
-        Download CV
-      </a>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
+        <a href="https://evalhire.com" target="_blank" class="btn btn-green">Try EvalHire →</a>
+        <a href="Remin_Franklin_Eliyas_CV.pdf" download class="btn btn-primary">Download CV</a>
+      </div>
     </div>
     <div class="contact-links">
       <a href="mailto:reminfranklin@gmail.com" class="contact-link">
         <span class="contact-link-icon">✉</span>
-        <div class="contact-link-body">
+        <div>
           <div class="contact-link-label">Email</div>
           <div class="contact-link-val">reminfranklin@gmail.com</div>
         </div>
       </a>
       <a href="https://linkedin.com/in/remin-franklin-eliyas" target="_blank" class="contact-link">
         <span class="contact-link-icon">in</span>
-        <div class="contact-link-body">
+        <div>
           <div class="contact-link-label">LinkedIn</div>
           <div class="contact-link-val">remin-franklin-eliyas</div>
         </div>
       </a>
       <a href="https://github.com/remin-franklin-eliyas" target="_blank" class="contact-link">
         <span class="contact-link-icon">⌥</span>
-        <div class="contact-link-body">
+        <div>
           <div class="contact-link-label">GitHub</div>
           <div class="contact-link-val">remin-franklin-eliyas</div>
+        </div>
+      </a>
+      <a href="https://evalhire.com" target="_blank" class="contact-link" style="border-color:rgba(29,158,117,0.3)">
+        <span class="contact-link-icon">🎯</span>
+        <div>
+          <div class="contact-link-label">Product</div>
+          <div class="contact-link-val" style="color:var(--green)">evalhire.com</div>
         </div>
       </a>
     </div>
@@ -837,8 +928,8 @@
 </section>
 
 <footer>
-  <span>Remin Franklin Eliyas — AI Engineer</span>
-  <span class="footer-right">Open to work — Bangalore / Chennai / Remote</span>
+  <span>Remin Franklin Eliyas — AI Engineer & Founder, EvalHire</span>
+  <span class="footer-right">evalhire.com · Open to work — Bangalore / Chennai / Remote</span>
 </footer>
 
 <script>
@@ -849,7 +940,6 @@
       }
     });
   }, { threshold: 0.1 });
-
   document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
 </script>
 </body>
