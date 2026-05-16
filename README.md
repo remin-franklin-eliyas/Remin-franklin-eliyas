@@ -4,7 +4,7 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=378ADD&center=true&vCenter=true&width=700&lines=Building+AI+that+ships+to+production+%F0%9F%9A%80;Founder+%40+EvalHire+%E2%80%94+evalhire.com;LLM+Evaluation+%7C+Agentic+AI+%7C+Document+Intelligence;MSc+Data+Science+%7C+Cardiff+University+%F0%9F%8F%B4%F0%9F%8F%B4%F0%9F%8F%B4)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=378ADD&center=true&vCenter=true&width=700&lines=Building+AI+that+ships+to+production+%F0%9F%9A%80;Founder+%40+EvalHire;LLM+Evaluation+%7C+Agentic+AI+%7C+Document+Intelligence;MSc+Data+Science+%7C+Cardiff+University+%F0%9F%8F%B4%F0%9F%8F%B4%F0%9F%8F%B4)](https://git.io/typing-svg)
 
 </div>
 
@@ -12,7 +12,7 @@
 
 ## 👋 About Me
 
-🚀 &nbsp;I'm the founder of **[EvalHire]** — an agentic AI CV screening platform for startup founders. Built and shipped from zero to live product in under 24 hours.
+🚀 &nbsp;I'm the founder of **[EvalHire]** — an agentic AI CV screening platform for startup founders. Built and shipped from zero to working product in under 24 hours.
 
 🔭 &nbsp;Previously built a **multi-model benchmarking framework** evaluating 10+ LLMs on real industrial certificates at a UK AI startup — from scratch, independently, in production.
 
@@ -52,7 +52,7 @@
         <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
         <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white" />
       </p>
-      <a href="https://github.com/remin-franklin-eliyas">View repo →</a>
+      <a href="https://github.com/GoSmarter-ai/mtc-extraction-benchmark">View repo →</a>
     </td>
   </tr>
   <tr>
@@ -64,7 +64,7 @@
         <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=flat-square&logo=supabase&logoColor=white" />
         <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
       </p>
-      <a href="https://github.com/remin-franklin-eliyas">View repo →</a>
+      <a href="https://github.com/remin-franklin-eliyas/f1-forecast">View repo →</a>
     </td>
     <td width="50%" valign="top">
       <h3>🏥 NHS No-Show Classifier</h3>
@@ -73,7 +73,6 @@
         <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" />
         <img src="https://img.shields.io/badge/XGBoost-FF6600?style=flat-square&logoColor=white" />
       </p>
-      <a href="https://github.com/remin-franklin-eliyas">View repo →</a>
     </td>
   </tr>
 </table>
