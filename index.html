@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Remin Franklin Eliyas — AI Engineer & Founder @EvalHire</title>
+<title>Remin Franklin Eliyas — AI Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet" />
 <style>
@@ -84,11 +84,11 @@
 
   .nav-links a:hover { color: var(--text); }
 
-  .nav-evalhire {
+  .nav-pypi {
     font-family: var(--mono);
     font-size: 12px;
-    color: var(--green) !important;
-    border: 1px solid var(--green);
+    color: var(--blue) !important;
+    border: 1px solid var(--blue);
     padding: 6px 14px;
     border-radius: 4px;
     text-decoration: none;
@@ -97,8 +97,8 @@
     transition: all 0.2s !important;
   }
 
-  .nav-evalhire:hover {
-    background: var(--green) !important;
+  .nav-pypi:hover {
+    background: var(--blue) !important;
     color: #fff !important;
   }
 
@@ -150,26 +150,30 @@
     background: var(--green);
   }
 
-  .founder-badge {
+  .pypi-badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     font-family: var(--mono);
     font-size: 11px;
-    color: var(--green);
-    background: rgba(29,158,117,0.1);
-    border: 1px solid rgba(29,158,117,0.3);
+    color: var(--blue);
+    background: rgba(55,138,221,0.1);
+    border: 1px solid rgba(55,138,221,0.3);
     padding: 6px 14px;
     border-radius: 20px;
     margin-bottom: 1.5rem;
     letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: background 0.2s;
   }
 
-  .founder-badge::before {
+  .pypi-badge:hover { background: rgba(55,138,221,0.18); }
+
+  .pypi-badge::before {
     content: '';
     width: 6px; height: 6px;
     border-radius: 50%;
-    background: var(--green);
+    background: var(--blue);
     animation: pulse 2s infinite;
   }
 
@@ -192,7 +196,7 @@
   .hero-sub {
     font-size: 1.1rem;
     color: var(--muted);
-    max-width: 560px;
+    max-width: 580px;
     margin-bottom: 2.5rem;
     line-height: 1.8;
   }
@@ -280,10 +284,10 @@
     line-height: 1.1;
   }
 
-  /* EVALHIRE SPOTLIGHT */
-  .evalhire-spotlight {
-    background: linear-gradient(135deg, rgba(29,158,117,0.08) 0%, rgba(55,138,221,0.05) 100%);
-    border: 1px solid rgba(29,158,117,0.25);
+  /* PROMPTHUB SPOTLIGHT */
+  .prompthub-spotlight {
+    background: linear-gradient(135deg, rgba(55,138,221,0.09) 0%, rgba(29,158,117,0.05) 100%);
+    border: 1px solid rgba(55,138,221,0.25);
     border-radius: 16px;
     padding: 2.5rem;
     margin-bottom: 3rem;
@@ -293,23 +297,23 @@
     align-items: center;
   }
 
-  .evalhire-spotlight-label {
+  .prompthub-spotlight-label {
     font-family: var(--mono);
     font-size: 10px;
-    color: var(--green);
+    color: var(--blue);
     letter-spacing: 0.15em;
     text-transform: uppercase;
     margin-bottom: 0.75rem;
   }
 
-  .evalhire-spotlight h3 {
+  .prompthub-spotlight h3 {
     font-size: 1.5rem;
     font-weight: 800;
     margin-bottom: 0.75rem;
     color: var(--text);
   }
 
-  .evalhire-spotlight p {
+  .prompthub-spotlight p {
     color: var(--muted);
     font-size: 14px;
     line-height: 1.8;
@@ -317,33 +321,39 @@
     margin-bottom: 1.25rem;
   }
 
-  .evalhire-metrics {
+  .prompthub-metrics {
     display: flex;
     gap: 2rem;
     margin-top: 1rem;
+    flex-wrap: wrap;
   }
 
-  .eh-metric-num {
+  .ph-metric-num {
     font-family: var(--mono);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    color: var(--green);
+    color: var(--blue);
     display: block;
   }
 
-  .eh-metric-label {
+  .ph-metric-label {
     font-size: 11px;
     color: var(--muted);
     font-family: var(--mono);
   }
 
-  .evalhire-cta { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
+  .prompthub-cta { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
 
-  .evalhire-live {
+  .pip-install {
     font-family: var(--mono);
-    font-size: 10px;
-    color: var(--muted);
-    letter-spacing: 0.08em;
+    font-size: 11px;
+    background: var(--bg3);
+    border: 1px solid var(--border2);
+    color: var(--blue);
+    padding: 8px 14px;
+    border-radius: 4px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
   }
 
   /* ABOUT */
@@ -372,7 +382,7 @@
     padding: 1.25rem 1.5rem;
   }
 
-  .aside-card.highlight { border-color: rgba(29,158,117,0.3); background: rgba(29,158,117,0.05); }
+  .aside-card.highlight { border-color: rgba(55,138,221,0.3); background: rgba(55,138,221,0.05); }
 
   .aside-card-label {
     font-family: var(--mono);
@@ -593,8 +603,8 @@
     .skills-grid { grid-template-columns: 1fr 1fr; }
     .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
     .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
-    .evalhire-spotlight { grid-template-columns: 1fr; }
-    .evalhire-metrics { gap: 1.5rem; flex-wrap: wrap; }
+    .prompthub-spotlight { grid-template-columns: 1fr; }
+    .prompthub-metrics { gap: 1.5rem; }
     footer { flex-direction: column; gap: 0.5rem; text-align: center; }
   }
 </style>
@@ -608,7 +618,7 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="https://github.com/remin-franklin-eliyas/evalhire-engine" target="_blank" class="nav-evalhire">EvalHire ↗</a></li>
+    <li><a href="https://pypi.org/project/prompthub-cli/" target="_blank" class="nav-pypi">PromptHub ↗</a></li>
   </ul>
 </nav>
 
@@ -616,24 +626,24 @@
   <div class="hero-glow"></div>
   <div class="hero-glow2"></div>
   <div class="hero-inner">
-    <div class="founder-badge">Founder, EvalHire</div>
+    <a href="https://pypi.org/project/prompthub-cli/" target="_blank" class="pypi-badge">Published on PyPI — prompthub-cli</a>
     <div class="hero-tag">AI Engineer — open to Bangalore / Chennai</div>
-    <h1>Remin Franklin<br><span class="accent">Eliyas.</span></h1></br></h1>
+    <h1>Remin Franklin<br><span class="accent">Eliyas.</span></h1>
     <p class="hero-sub">
-      <strong>AI Engineer</strong> specialising in agentic AI systems, LLM evaluation, and document intelligence.
-      Founded EvalHire — shipped from zero to working product in 24 hours.
-      Previously built production pipelines at a UK AI startup.
+      <strong>AI Engineer</strong> specialising in LLM infrastructure, backend systems, and agentic AI pipelines.
+      Published <strong>prompthub-cli</strong> on PyPI — git-like version control for AI prompts, with semantic diff and output regression testing.
+      Previously built production multi-model benchmarking systems at a UK AI startup.
       MSc Data Science, Cardiff University (Merit).
     </p>
     <div class="hero-cta">
-      <a href="https://github.com/remin-franklin-eliyas/evalhire-engine" target="_blank" class="btn btn-green">EvalHire repo→</a>
-      <a href="Remin_Franklin_Eliyas_CV.pdf" download class="btn btn-primary">Download CV</a>
-      <a href="#projects" class="btn btn-outline">View Projects</a>
+      <a href="https://pypi.org/project/prompthub-cli/" target="_blank" class="btn btn-primary">PromptHub on PyPI →</a>
+      <a href="https://github.com/remin-franklin-eliyas/prompthub" target="_blank" class="btn btn-outline">View on GitHub</a>
+      <a href="Remin_Franklin_Eliyas_CV.pdf" download class="btn btn-outline">Download CV</a>
     </div>
     <div class="hero-stats">
       <div class="stat-item">
-        <span class="stat-num">24hrs</span>
-        <span class="stat-label">Zero to working product</span>
+        <span class="stat-num">PyPI</span>
+        <span class="stat-label">Published package</span>
       </div>
       <div class="stat-item">
         <span class="stat-num">+233%</span>
@@ -657,41 +667,43 @@
   <div class="about-grid">
     <div class="about-text fade-up">
       <p>
-        I'm an AI Engineer and founder based in <strong>Coimbatore, India</strong>. I founded
-        <strong>EvalHire</strong> — an agentic AI CV screening platform for startup founders —
-        and shipped it from zero to a working product with user accounts, batch processing,
-        evaluation history.
+        I'm an AI Engineer based in <strong>Coimbatore, India</strong>, focused on building
+        LLM infrastructure, backend services, and evaluation frameworks that hold up in production.
+        I published <strong>prompthub-cli</strong> on PyPI — a developer tool that brings
+        git-like version control, semantic diffing, and behavioural regression testing to AI prompts.
       </p>
       <p>
         Before that, I spent 3 months at <strong>GoSmarter AI</strong> in Cardiff — a UK startup
-        building document intelligence for steel manufacturing — where I designed and shipped a full
-        multi-model benchmarking framework, three-tier hybrid extraction pipeline, FastAPI service,
-        and CI/CD setup from scratch, independently.
+        building document intelligence for steel manufacturing — where I independently designed and shipped
+        a full multi-model benchmarking framework, three-tier hybrid extraction pipeline, FastAPI service,
+        and CI/CD setup from scratch.
       </p>
       <p>
         I hold an <strong>MSc in Data Science and Analytics (Merit)</strong> from Cardiff University.
-        I care about rigorous LLM evaluation, clean system design, and AI that ships.
+        I care about rigorous LLM evaluation, clean API design, and systems that are built to be maintained —
+        not just demoed.
       </p>
       <p>
         When I'm not building: <strong>Formula 1</strong> strategy, screenplays, and the surprising
         overlap between scene structure and system design.
       </p>
       <div class="tag-row">
-        <span class="tag">Agentic AI</span>
-        <span class="tag">LLM Evaluation</span>
-        <span class="tag">RAG Pipelines</span>
-        <span class="tag">Document AI</span>
+        <span class="tag">Python</span>
         <span class="tag">FastAPI</span>
+        <span class="tag">LLM Evaluation</span>
+        <span class="tag">Agentic AI</span>
+        <span class="tag">RAG Pipelines</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Docker</span>
         <span class="tag">CI/CD</span>
         <span class="tag">Vision LLMs</span>
         <span class="tag">OCR</span>
-        <span class="tag">PyTorch</span>
       </div>
     </div>
     <div class="about-aside fade-up">
       <div class="aside-card highlight">
-        <div class="aside-card-label">Currently Building</div>
-        <div class="aside-card-val" style="color:var(--green)">EvalHire<br/><span style="color:var(--muted);font-size:13px">Agentic AI CV screening for startup founders</span></div>
+        <div class="aside-card-label">Published Package</div>
+        <div class="aside-card-val" style="color:var(--blue)">prompthub-cli<br/><span style="color:var(--muted);font-size:13px">Git-like version control for AI prompts — PyPI</span></div>
       </div>
       <div class="aside-card">
         <div class="aside-card-label">Education</div>
@@ -713,35 +725,41 @@
   <div class="section-tag">// projects</div>
   <h2>What I have built</h2>
 
-  <!-- EvalHire Spotlight -->
-  <div class="evalhire-spotlight fade-up">
+  <!-- PromptHub Spotlight -->
+  <div class="prompthub-spotlight fade-up">
     <div>
-      <div class="evalhire-spotlight-label">🟢 working Product</div>
-      <h3>EvalHire — Agentic CV Screening</h3>
+      <div class="prompthub-spotlight-label">📦 Published on PyPI — v0.1.1</div>
+      <h3>PromptHub — Version Control for AI Prompts</h3>
       <p>
-        Paste a job description, upload CVs, get back a ranked shortlist with fit scores, 3-bullet reasoning,
-        and candidate contact details — in under 60 seconds. Configurable LLM personas: Founding CTO,
-        VP Sales, Design Lead, or custom. User accounts, evaluation history, batch processing.
-        Built solo from zero to working product in under 24 hours.
+        Developer tool that treats prompts as first-class engineering artifacts.
+        <code style="font-family:var(--mono);font-size:12px;background:var(--bg3);padding:2px 6px;border-radius:3px;">git diff</code> tells you line 3 changed —
+        PromptHub tells you the <em>meaning</em> changed. Semantic diffing via cosine distance on sentence embeddings,
+        structural change detection (tone, format, reasoning, role), and behavioural regression testing by running
+        both versions through a local LLM and comparing outputs. Fully local: SQLite storage, Ollama for inference, no API costs.
       </p>
-      <div class="evalhire-metrics">
+      <div class="prompthub-metrics">
         <div>
-          <span class="eh-metric-num">24hrs</span>
-          <span class="eh-metric-label">zero to deployed</span>
+          <span class="ph-metric-num">PyPI</span>
+          <span class="ph-metric-label">published package</span>
         </div>
         <div>
-          <span class="eh-metric-num">5+</span>
-          <span class="eh-metric-label">persona presets</span>
+          <span class="ph-metric-num">SQLite</span>
+          <span class="ph-metric-label">local version store</span>
         </div>
         <div>
-          <span class="eh-metric-num">∞</span>
-          <span class="eh-metric-label">CVs per batch</span>
+          <span class="ph-metric-num">Ollama</span>
+          <span class="ph-metric-label">offline regression testing</span>
+        </div>
+        <div>
+          <span class="ph-metric-num">MIT</span>
+          <span class="ph-metric-label">open source</span>
         </div>
       </div>
     </div>
-    <div class="evalhire-cta">
-      <a href="https://github.com/remin-franklin-eliyas/evalhire-engine" target="_blank" class="project-link">View on GitHub →</a>
-      <span class="evalhire-live">evalhire deployed on Railway</span>
+    <div class="prompthub-cta">
+      <a href="https://pypi.org/project/prompthub-cli/" target="_blank" class="btn btn-primary">View on PyPI →</a>
+      <a href="https://github.com/remin-franklin-eliyas/prompthub" target="_blank" class="project-link">GitHub repo →</a>
+      <span class="pip-install">pip install prompthub-cli</span>
     </div>
   </div>
 
@@ -753,7 +771,8 @@
         <p class="project-desc">
           Production benchmarking framework evaluating 10+ LLMs and OCR engines on real Mill Test
           Certificates for steel manufacturing. Built independently at GoSmarter AI.
-          Three-tier hybrid routing pipeline, automated CI/CD, and FastAPI REST service from scratch.
+          Three-tier hybrid routing pipeline, automated CI/CD, and FastAPI REST service —
+          designed, built, and shipped from scratch as a solo engineer.
         </p>
         <div class="project-tags">
           <span class="tag">FastAPI</span>
@@ -762,6 +781,7 @@
           <span class="tag">PaddleOCR</span>
           <span class="tag">HuggingFace</span>
           <span class="tag">Docker</span>
+          <span class="tag">PostgreSQL</span>
         </div>
         <a href="https://github.com/GoSmarter-ai/mtc-extraction-benchmark" class="project-link" target="_blank">View on GitHub →</a>
       </div>
@@ -790,6 +810,25 @@
     </div>
 
     <div class="project-card fade-up">
+      <div class="project-icon">🎯</div>
+      <div class="project-title">EvalHire — Agentic CV Screener</div>
+      <p class="project-desc">
+        Agentic AI CV screening platform for startup founders. Paste a JD, upload CVs,
+        get a ranked shortlist with fit scores, 3-bullet reasoning, and candidate contact details
+        in under 60 seconds. Configurable LLM personas. User accounts, evaluation history, batch processing.
+        Full FastAPI backend with JWT auth, PostgreSQL, deployed on Railway.
+      </p>
+      <div class="project-tags">
+        <span class="tag">FastAPI</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Railway</span>
+        <span class="tag">JWT Auth</span>
+        <span class="tag">Agentic AI</span>
+      </div>
+      <a href="https://github.com/remin-franklin-eliyas/evalhire-engine" class="project-link" target="_blank">View on GitHub →</a>
+    </div>
+
+    <div class="project-card fade-up">
       <div class="project-icon">🏎️</div>
       <div class="project-title">F1 Forecast</div>
       <p class="project-desc">
@@ -808,17 +847,16 @@
 
     <div class="project-card fade-up">
       <div class="project-icon">🔎</div>
-      <div class="project-title">PITLANE - Job Application Tracker</div>
+      <div class="project-title">PITLANE — Job Application Tracker</div>
       <p class="project-desc">
-        PitLane — AI-Powered Job Application Tracker
-        Track every job application you send, stay on top of follow-ups, and use AI to give yourself an edge — from resume analysis to interview prep.
+        AI-powered job application tracker. Track applications, surface follow-ups, and use AI for resume analysis and interview prep.
         Built with React + Vite, Node.js/Express, SQLite, and GitHub Models (gpt-4o).
       </p>
       <div class="project-tags">
-        <span class="tag">Python</span>
-        <span class="tag">JavaScript</span>
-        <span class="tag">Document Intelligence</span>
-        <span class="tag">OCR</span>
+        <span class="tag">React</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">SQLite</span>
+        <span class="tag">GitHub Models</span>
       </div>
       <a href="https://github.com/remin-franklin-eliyas/application-tracker" class="project-link" target="_blank">View on GitHub →</a>
     </div>
@@ -846,45 +884,45 @@
   <h2>Tech stack</h2>
   <div class="skills-grid fade-up">
     <div class="skill-group">
-      <div class="skill-group-title">AI / Agentic Systems</div>
+      <div class="skill-group-title">AI / LLM Systems</div>
       <div class="skill-list">
-        <span class="skill-item">Agentic AI</span>
-        <span class="skill-item">LLM Evaluation</span>
+        <span class="skill-item">LLM Evaluation Frameworks</span>
+        <span class="skill-item">Agentic AI Pipelines</span>
         <span class="skill-item">RAG Pipelines</span>
         <span class="skill-item">Prompt Engineering</span>
         <span class="skill-item">Vision LLMs</span>
+        <span class="skill-item">Semantic Embeddings</span>
         <span class="skill-item">LLM Fine-tuning</span>
         <span class="skill-item">PyTorch</span>
-        <span class="skill-item">scikit-learn</span>
-        <span class="skill-item">BERT / CNN</span>
+        <span class="skill-item">scikit-learn / XGBoost</span>
       </div>
     </div>
     <div class="skill-group">
-      <div class="skill-group-title">Engineering</div>
+      <div class="skill-group-title">Backend Engineering</div>
       <div class="skill-list">
-        <span class="skill-item">Python</span>
-        <span class="skill-item">FastAPI</span>
-        <span class="skill-item">LangChain</span>
-        <span class="skill-item">Docker</span>
-        <span class="skill-item">GitHub Actions</span>
-        <span class="skill-item">SQLAlchemy / PostgreSQL</span>
+        <span class="skill-item">Python (primary)</span>
+        <span class="skill-item">FastAPI / REST APIs</span>
+        <span class="skill-item">PostgreSQL / SQLite</span>
+        <span class="skill-item">SQLAlchemy / Pydantic</span>
         <span class="skill-item">JWT Auth / bcrypt</span>
-        <span class="skill-item">Pydantic</span>
+        <span class="skill-item">Docker</span>
+        <span class="skill-item">GitHub Actions (CI/CD)</span>
         <span class="skill-item">pytest / ruff</span>
+        <span class="skill-item">LangChain</span>
       </div>
     </div>
     <div class="skill-group">
-      <div class="skill-group-title">APIs and Cloud</div>
+      <div class="skill-group-title">Cloud &amp; APIs</div>
       <div class="skill-list">
         <span class="skill-item">Anthropic API</span>
         <span class="skill-item">OpenAI API</span>
-        <span class="skill-item">Azure AI</span>
+        <span class="skill-item">Azure AI Document Intelligence</span>
         <span class="skill-item">HuggingFace</span>
         <span class="skill-item">AWS</span>
-        <span class="skill-item">Railway</span>
-        <span class="skill-item">Supabase</span>
+        <span class="skill-item">Railway / Supabase</span>
         <span class="skill-item">OCR (PaddleOCR, Tesseract, DocTR)</span>
         <span class="skill-item">OpenCV</span>
+        <span class="skill-item">sentence-transformers</span>
       </div>
     </div>
   </div>
@@ -896,17 +934,16 @@
   <div class="contact-inner fade-up">
     <div class="contact-text">
       <p>
-        I'm the founder of <strong>EvalHire</strong> and actively looking for
-        <strong>AI Engineer / GenAI Engineer roles</strong> in Bangalore or Chennai.
-        Open to remote roles with UK or EU-based companies too.
+        I'm actively looking for <strong>AI Engineer / GenAI Engineer roles</strong> in Bangalore or Chennai,
+        and open to remote roles with UK or EU-based companies.
       </p>
       <p>
-        If you're building something interesting in agentic AI, document intelligence,
-        or LLM evaluation — or if you want to try EvalHire for your next hire — I'd like to hear from you.
+        If you're building LLM infrastructure, document intelligence pipelines, or backend AI systems —
+        or if you want to try <strong>prompthub-cli</strong> in your workflow — I'd like to hear from you.
       </p>
       <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
-        <a href="https://evalhire.com" target="_blank" class="btn btn-green">Try EvalHire →</a>
-        <a href="Remin_Franklin_Eliyas_CV.pdf" download class="btn btn-primary">Download CV</a>
+        <a href="https://pypi.org/project/prompthub-cli/" target="_blank" class="btn btn-primary">Try PromptHub →</a>
+        <a href="Remin_Franklin_Eliyas_CV.pdf" download class="btn btn-outline">Download CV</a>
       </div>
     </div>
     <div class="contact-links">
@@ -917,12 +954,13 @@
           <div class="contact-link-val">reminfranklin@gmail.com</div>
         </div>
       </a>
-     <a href="https://github.com/remin-franklin-eliyas" target="_blank" class="contact-link">
+      <a href="tel:+917708833812" class="contact-link">
+        <span class="contact-link-icon">📱</span>
         <div>
-          <div class="contact-link-label">Mobile Number</div>
+          <div class="contact-link-label">Mobile</div>
           <div class="contact-link-val">+91 7708833812</div>
         </div>
-     </a>
+      </a>
       <a href="https://linkedin.com/in/remin-franklin-eliyas" target="_blank" class="contact-link">
         <span class="contact-link-icon">in</span>
         <div>
@@ -937,11 +975,11 @@
           <div class="contact-link-val">remin-franklin-eliyas</div>
         </div>
       </a>
-      <a href="https://evalhire.com" target="_blank" class="contact-link" style="border-color:rgba(29,158,117,0.3)">
-        <span class="contact-link-icon">🎯</span>
+      <a href="https://pypi.org/project/prompthub-cli/" target="_blank" class="contact-link" style="border-color:rgba(55,138,221,0.3)">
+        <span class="contact-link-icon">📦</span>
         <div>
-          <div class="contact-link-label">Product</div>
-          <div class="contact-link-val" style="color:var(--green)">evalhire.com</div>
+          <div class="contact-link-label">Package</div>
+          <div class="contact-link-val" style="color:var(--blue)">pypi.org/project/prompthub-cli</div>
         </div>
       </a>
     </div>
@@ -949,7 +987,7 @@
 </section>
 
 <footer>
-  <span>Remin Franklin Eliyas — AI Engineer & Founder, EvalHire</span>
+  <span>Remin Franklin Eliyas — AI Engineer</span>
   <span class="footer-right">Open to work — Bangalore / Chennai / Remote</span>
 </footer>
 
