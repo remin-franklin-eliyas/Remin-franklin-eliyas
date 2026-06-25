@@ -1,1 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Remin Franklin Eliyas — AI Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;700;800&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:       #0a0a0f;
+    --bg2:      #111118;
+    --bg3:      #17171f;
+    --border:   rgba(255,255,255,0.07);
+    --border2:  rgba(255,255,255,0.13);
+    --blue:     #378ADD;
+    --green:    #1D9E75;
+    --text:     #e8e8f0;
+    --muted:    #7a7a90;
+    --mono:     'Space Mono', monospace;
+    --sans:     'Syne', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+  }
+
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 3rem;
+    background: rgba(10,10,15,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--green);
+    letter-spacing: 0.05em;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-links a {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--text); }
+
+  .nav-pypi {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--blue) !important;
+    border: 1px solid var(--blue);
+    padding: 6px 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: all 0.2s !important;
+  }
+
+  .nav-pypi:hover {
+    background: var(--blue) !important;
+    color: #fff !important;
+  }
+
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 8rem 3rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-glow {
+    position: absolute;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(55,138,221,0.12) 0%, transparent 70%);
+    top: -100px; right: -100px;
+    pointer-events: none;
+  }
+
+  .hero-glow2 {
+    position: absolute;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(29,158,117,0.08) 0%, transparent 70%);
+    bottom: 0; left: 200px;
+    pointer-events: none;
+  }
+
+  .hero-inner { max-width: 900px; position: relative; z-index: 1; }
+
+  .hero-tag {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--green);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-tag::before {
+    content: '';
+    display: inline-block;
+    width: 24px; height: 1px;
+    background: var(--green);
+  }
+
+  .pypi-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--blue);
+    background: rgba(55,138,221,0.1);
+    border: 1px solid rgba(55,138,221,0.3);
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .pypi-badge:hover { background: rgba(55,138,221,0.18); }
+
+  .pypi-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--blue);
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  h1 {
+    font-family: var(--sans);
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 800;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 .accent { color: var(--blue); }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    color: var(--muted);
+    max-width: 580px;
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+  }
+
+  .hero-sub strong { color: var(--text); font-weight: 500; }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.85rem 1.75rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+  }
+
+  .btn-primary { background: var(--blue); color: #fff; }
+  .btn-primary:hover { background: #4a99ee; transform: translateY(-1px); }
+
+  .btn-green { background: var(--green); color: #fff; }
+  .btn-green:hover { background: #23b887; transform: translateY(-1px); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border2);
+  }
+  .btn-outline:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-1px); }
+
+  .hero-stats {
+    display: flex;
+    gap: 3rem;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .stat-num {
+    font-family: var(--mono);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--blue);
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: var(--muted);
+    font-family: var(--mono);
+    letter-spacing: 0.05em;
+  }
+
+  section {
+    padding: 6rem 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .section-tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--green);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 3rem;
+    line-height: 1.1;
+  }
+
+  /* PROMPTHUB SPOTLIGHT */
+  .prompthub-spotlight {
+    background: linear-gradient(135deg, rgba(55,138,221,0.09) 0%, rgba(29,158,117,0.05) 100%);
+    border: 1px solid rgba(55,138,221,0.25);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .prompthub-spotlight-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--blue);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  .prompthub-spotlight h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+  }
+
+  .prompthub-spotlight p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 580px;
+    margin-bottom: 1.25rem;
+  }
+
+  .prompthub-metrics {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .ph-metric-num {
+    font-family: var(--mono);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--blue);
+    display: block;
+  }
+
+  .ph-metric-label {
+    font-size: 11px;
+    color: var(--muted);
+    font-family: var(--mono);
+  }
+
+  .prompthub-cta { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
+
+  .pip-install {
+    font-family: var(--mono);
+    font-size: 11px;
+    background: var(--bg3);
+    border: 1px solid var(--border2);
+    color: var(--blue);
+    padding: 8px 14px;
+    border-radius: 4px;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about-text p {
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.85;
+  }
+
+  .about-text p strong { color: var(--text); font-weight: 500; }
+
+  .about-aside { display: flex; flex-direction: column; gap: 1rem; }
+
+  .aside-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .aside-card.highlight { border-color: rgba(55,138,221,0.3); background: rgba(55,138,221,0.05); }
+
+  .aside-card-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--green);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .aside-card-val {
+    font-size: 14px;
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 1.5rem; }
+
+  .tag {
+    font-family: var(--mono);
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    letter-spacing: 0.03em;
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .project-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 2rem;
+    transition: border-color 0.2s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .project-card:hover { border-color: var(--blue); transform: translateY(-3px); }
+
+  .project-card.featured {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .project-icon { font-size: 1.5rem; margin-bottom: 0.25rem; }
+
+  .project-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.25rem;
+  }
+
+  .project-desc { font-size: 14px; color: var(--muted); line-height: 1.7; flex: 1; }
+
+  .project-metrics { display: flex; flex-direction: column; gap: 0.75rem; }
+
+  .metric-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 13px;
+  }
+
+  .metric-num { color: var(--blue); font-weight: 700; min-width: 60px; }
+  .metric-desc { color: var(--muted); font-size: 12px; }
+
+  .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+
+  .project-link {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--blue);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 0.5rem;
+    align-self: flex-start;
+  }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .skill-group {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+  }
+
+  .skill-group-title {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--green);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .skill-list { display: flex; flex-direction: column; gap: 6px; }
+
+  .skill-item {
+    font-size: 13px;
+    color: var(--muted);
+    font-family: var(--mono);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .skill-item::before {
+    content: '';
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: var(--blue);
+    flex-shrink: 0;
+  }
+
+  /* CONTACT */
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .contact-text p {
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.85;
+    margin-bottom: 1rem;
+  }
+
+  .contact-text strong { color: var(--text); }
+
+  .contact-links { display: flex; flex-direction: column; gap: 1rem; }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .contact-link:hover { border-color: var(--blue); transform: translateX(4px); }
+
+  .contact-link-icon { font-size: 1.1rem; width: 32px; text-align: center; }
+
+  .contact-link-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .contact-link-val { font-size: 14px; color: var(--text); }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--muted);
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer-right { color: var(--green); }
+
+  .fade-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { gap: 1rem; }
+    #hero { padding: 7rem 1.5rem 3rem; }
+    section { padding: 4rem 1.5rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .project-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
+    .skills-grid { grid-template-columns: 1fr 1fr; }
+    .contact-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+    .prompthub-spotlight { grid-template-columns: 1fr; }
+    .prompthub-metrics { gap: 1.5rem; }
+    footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#">remin.dev</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="https://pypi.org/project/prompthub-cli/" target="_blank" class="nav-pypi">PromptHub ↗</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-inner">
+    <a href="https://pypi.org/project/prompthub-cli/" target="_blank" class="pypi-badge">Published on PyPI — prompthub-cli</a>
+    <div class="hero-tag">AI Engineer — open to Bangalore / Chennai</div>
+    <h1>Remin Franklin<br><span class="accent">Eliyas.</span></h1>
+    <p class="hero-sub">
+      <strong>AI Engineer</strong> specialising in LLM infrastructure, backend systems, and agentic AI pipelines.
+      Published <strong>prompthub-cli</strong> on PyPI — git-like version control for AI prompts, with semantic diff and output regression testing.
+      Previously built production multi-model benchmarking systems at a UK AI startup.
+      MSc Data Science, Cardiff University (Merit).
+    </p>
+    <div class="hero-cta">
+      <a href="https://pypi.org/project/prompthub-cli/" target="_blank" class="btn btn-primary">PromptHub on PyPI →</a>
+      <a href="https://github.com/remin-franklin-eliyas/prompthub" target="_blank" class="btn btn-outline">View on GitHub</a>
+      <a href="Remin_Franklin_Eliyas_CV.pdf" download class="btn btn-outline">Download CV</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num">PyPI</span>
+        <span class="stat-label">Published package</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">+233%</span>
+        <span class="stat-label">Extraction improvement</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">10+</span>
+        <span class="stat-label">LLMs benchmarked</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">1500+</span>
+        <span class="stat-label">Lines production Python</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-tag">// about</div>
+  <h2>Who I am</h2>
+  <div class="about-grid">
+    <div class="about-text fade-up">
+      <p>
+        I'm an AI Engineer based in <strong>Coimbatore, India</strong>, focused on building
+        LLM infrastructure, backend services, and evaluation frameworks that hold up in production.
+        I published <strong>prompthub-cli</strong> on PyPI — a developer tool that brings
+        git-like version control, semantic diffing, and behavioural regression testing to AI prompts.
+      </p>
+      <p>
+        Before that, I spent 3 months at <strong>GoSmarter AI</strong> in Cardiff — a UK startup
+        building document intelligence for steel manufacturing — where I independently designed and shipped
+        a full multi-model benchmarking framework, three-tier hybrid extraction pipeline, FastAPI service,
+        and CI/CD setup from scratch.
+      </p>
+      <p>
+        I hold an <strong>MSc in Data Science and Analytics (Merit)</strong> from Cardiff University.
+        I care about rigorous LLM evaluation, clean API design, and systems that are built to be maintained —
+        not just demoed.
+      </p>
+      <p>
+        When I'm not building: <strong>Formula 1</strong> strategy, screenplays, and the surprising
+        overlap between scene structure and system design.
+      </p>
+      <div class="tag-row">
+        <span class="tag">Python</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">LLM Evaluation</span>
+        <span class="tag">Agentic AI</span>
+        <span class="tag">RAG Pipelines</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Docker</span>
+        <span class="tag">CI/CD</span>
+        <span class="tag">Vision LLMs</span>
+        <span class="tag">OCR</span>
+      </div>
+    </div>
+    <div class="about-aside fade-up">
+      <div class="aside-card highlight">
+        <div class="aside-card-label">Published Package</div>
+        <div class="aside-card-val" style="color:var(--blue)">prompthub-cli<br/><span style="color:var(--muted);font-size:13px">Git-like version control for AI prompts — PyPI</span></div>
+      </div>
+      <div class="aside-card">
+        <div class="aside-card-label">Education</div>
+        <div class="aside-card-val">MSc Data Science and Analytics<br/><span style="color:var(--muted);font-size:13px">Cardiff University, UK — Merit (2023–2025)</span></div>
+      </div>
+      <div class="aside-card">
+        <div class="aside-card-label">Last Role</div>
+        <div class="aside-card-val">AI Engineer — GoSmarter AI<br/><span style="color:var(--muted);font-size:13px">Cardiff, UK — Contract (Jan–Mar 2026)</span></div>
+      </div>
+      <div class="aside-card">
+        <div class="aside-card-label">Location</div>
+        <div class="aside-card-val">Coimbatore, India<br/><span style="color:var(--muted);font-size:13px">Open to Bangalore / Chennai relocation</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="section-tag">// projects</div>
+  <h2>What I have built</h2>
+
+  <!-- PromptHub Spotlight -->
+  <div class="prompthub-spotlight fade-up">
+    <div>
+      <div class="prompthub-spotlight-label">📦 Published on PyPI — v0.1.1</div>
+      <h3>PromptHub — Version Control for AI Prompts</h3>
+      <p>
+        Developer tool that treats prompts as first-class engineering artifacts.
+        <code style="font-family:var(--mono);font-size:12px;background:var(--bg3);padding:2px 6px;border-radius:3px;">git diff</code> tells you line 3 changed —
+        PromptHub tells you the <em>meaning</em> changed. Semantic diffing via cosine distance on sentence embeddings,
+        structural change detection (tone, format, reasoning, role), and behavioural regression testing by running
+        both versions through a local LLM and comparing outputs. Fully local: SQLite storage, Ollama for inference, no API costs.
+      </p>
+      <div class="prompthub-metrics">
+        <div>
+          <span class="ph-metric-num">PyPI</span>
+          <span class="ph-metric-label">published package</span>
+        </div>
+        <div>
+          <span class="ph-metric-num">SQLite</span>
+          <span class="ph-metric-label">local version store</span>
+        </div>
+        <div>
+          <span class="ph-metric-num">Ollama</span>
+          <span class="ph-metric-label">offline regression testing</span>
+        </div>
+        <div>
+          <span class="ph-metric-num">MIT</span>
+          <span class="ph-metric-label">open source</span>
+        </div>
+      </div>
+    </div>
+    <div class="prompthub-cta">
+      <a href="https://pypi.org/project/prompthub-cli/" target="_blank" class="btn btn-primary">View on PyPI →</a>
+      <a href="https://github.com/remin-franklin-eliyas/prompthub" target="_blank" class="project-link">GitHub repo →</a>
+      <span class="pip-install">pip install prompthub-cli</span>
+    </div>
+  </div>
+
+  <div class="projects-grid">
+    <div class="project-card featured fade-up">
+      <div>
+        <div class="project-icon">🏭</div>
+        <div class="project-title">MTC Extraction Benchmark</div>
+        <p class="project-desc">
+          Production benchmarking framework evaluating 10+ LLMs and OCR engines on real Mill Test
+          Certificates for steel manufacturing. Built independently at GoSmarter AI.
+          Three-tier hybrid routing pipeline, automated CI/CD, and FastAPI REST service —
+          designed, built, and shipped from scratch as a solo engineer.
+        </p>
+        <div class="project-tags">
+          <span class="tag">FastAPI</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">Azure AI</span>
+          <span class="tag">PaddleOCR</span>
+          <span class="tag">HuggingFace</span>
+          <span class="tag">Docker</span>
+          <span class="tag">PostgreSQL</span>
+        </div>
+        <a href="https://github.com/GoSmarter-ai/mtc-extraction-benchmark" class="project-link" target="_blank">View on GitHub →</a>
+      </div>
+      <div class="project-metrics">
+        <div class="metric-line">
+          <span class="metric-num">+233%</span>
+          <span class="metric-desc">heat number extraction vs rule-based baseline</span>
+        </div>
+        <div class="metric-line">
+          <span class="metric-num">+38%</span>
+          <span class="metric-desc">test sample coverage gain (58 → 80 rows)</span>
+        </div>
+        <div class="metric-line">
+          <span class="metric-num">10+</span>
+          <span class="metric-desc">LLMs benchmarked across 6 providers</span>
+        </div>
+        <div class="metric-line">
+          <span class="metric-num">1,500+</span>
+          <span class="metric-desc">lines of production Python</span>
+        </div>
+        <div class="metric-line">
+          <span class="metric-num">8</span>
+          <span class="metric-desc">systematic failure modes resolved</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card fade-up">
+      <div class="project-icon">🎯</div>
+      <div class="project-title">EvalHire — Agentic CV Screener</div>
+      <p class="project-desc">
+        Agentic AI CV screening platform for startup founders. Paste a JD, upload CVs,
+        get a ranked shortlist with fit scores, 3-bullet reasoning, and candidate contact details
+        in under 60 seconds. Configurable LLM personas. User accounts, evaluation history, batch processing.
+        Full FastAPI backend with JWT auth, PostgreSQL, deployed on Railway.
+      </p>
+      <div class="project-tags">
+        <span class="tag">FastAPI</span>
+        <span class="tag">PostgreSQL</span>
+        <span class="tag">Railway</span>
+        <span class="tag">JWT Auth</span>
+        <span class="tag">Agentic AI</span>
+      </div>
+      <a href="https://github.com/remin-franklin-eliyas/evalhire-engine" class="project-link" target="_blank">View on GitHub →</a>
+    </div>
+
+    <div class="project-card fade-up">
+      <div class="project-icon">🏎️</div>
+      <div class="project-title">F1 Forecast</div>
+      <p class="project-desc">
+        Race strategy prediction simulator with live multiplayer leaderboard.
+        Real F1 data ingestion via FastF1. Deployed on GitHub Pages with Supabase backend.
+        Real users on day one of launch.
+      </p>
+      <div class="project-tags">
+        <span class="tag">Python</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">FastF1</span>
+        <span class="tag">Supabase</span>
+      </div>
+      <a href="https://github.com/remin-franklin-eliyas/f1-forecast" class="project-link" target="_blank">View on GitHub →</a>
+    </div>
+
+    <div class="project-card fade-up">
+      <div class="project-icon">🔎</div>
+      <div class="project-title">PITLANE — Job Application Tracker</div>
+      <p class="project-desc">
+        AI-powered job application tracker. Track applications, surface follow-ups, and use AI for resume analysis and interview prep.
+        Built with React + Vite, Node.js/Express, SQLite, and GitHub Models (gpt-4o).
+      </p>
+      <div class="project-tags">
+        <span class="tag">React</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">SQLite</span>
+        <span class="tag">GitHub Models</span>
+      </div>
+      <a href="https://github.com/remin-franklin-eliyas/application-tracker" class="project-link" target="_blank">View on GitHub →</a>
+    </div>
+
+    <div class="project-card fade-up">
+      <div class="project-icon">🏥</div>
+      <div class="project-title">NHS No-Show Classifier</div>
+      <p class="project-desc">
+        MSc dissertation — end-to-end classification pipeline predicting patient no-shows
+        for NHS scheduling. XGBoost, SMOTE class balancing, SHAP interpretability.
+        Compared 4 classifiers with full evaluation pipeline.
+      </p>
+      <div class="project-tags">
+        <span class="tag">scikit-learn</span>
+        <span class="tag">XGBoost</span>
+        <span class="tag">SHAP</span>
+        <span class="tag">SMOTE</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="section-tag">// skills</div>
+  <h2>Tech stack</h2>
+  <div class="skills-grid fade-up">
+    <div class="skill-group">
+      <div class="skill-group-title">AI / LLM Systems</div>
+      <div class="skill-list">
+        <span class="skill-item">LLM Evaluation Frameworks</span>
+        <span class="skill-item">Agentic AI Pipelines</span>
+        <span class="skill-item">RAG Pipelines</span>
+        <span class="skill-item">Prompt Engineering</span>
+        <span class="skill-item">Vision LLMs</span>
+        <span class="skill-item">Semantic Embeddings</span>
+        <span class="skill-item">LLM Fine-tuning</span>
+        <span class="skill-item">PyTorch</span>
+        <span class="skill-item">scikit-learn / XGBoost</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Backend Engineering</div>
+      <div class="skill-list">
+        <span class="skill-item">Python (primary)</span>
+        <span class="skill-item">FastAPI / REST APIs</span>
+        <span class="skill-item">PostgreSQL / SQLite</span>
+        <span class="skill-item">SQLAlchemy / Pydantic</span>
+        <span class="skill-item">JWT Auth / bcrypt</span>
+        <span class="skill-item">Docker</span>
+        <span class="skill-item">GitHub Actions (CI/CD)</span>
+        <span class="skill-item">pytest / ruff</span>
+        <span class="skill-item">LangChain</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Cloud &amp; APIs</div>
+      <div class="skill-list">
+        <span class="skill-item">Anthropic API</span>
+        <span class="skill-item">OpenAI API</span>
+        <span class="skill-item">Azure AI Document Intelligence</span>
+        <span class="skill-item">HuggingFace</span>
+        <span class="skill-item">AWS</span>
+        <span class="skill-item">Railway / Supabase</span>
+        <span class="skill-item">OCR (PaddleOCR, Tesseract, DocTR)</span>
+        <span class="skill-item">OpenCV</span>
+        <span class="skill-item">sentence-transformers</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-tag">// contact</div>
+  <h2>Get in touch</h2>
+  <div class="contact-inner fade-up">
+    <div class="contact-text">
+      <p>
+        I'm actively looking for <strong>AI Engineer / GenAI Engineer roles</strong> in Bangalore or Chennai,
+        and open to remote roles with UK or EU-based companies.
+      </p>
+      <p>
+        If you're building LLM infrastructure, document intelligence pipelines, or backend AI systems —
+        or if you want to try <strong>prompthub-cli</strong> in your workflow — I'd like to hear from you.
+      </p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem">
+        <a href="https://pypi.org/project/prompthub-cli/" target="_blank" class="btn btn-primary">Try PromptHub →</a>
+        <a href="Remin_Franklin_Eliyas_CV.pdf" download class="btn btn-outline">Download CV</a>
+      </div>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:reminfranklin@gmail.com" class="contact-link">
+        <span class="contact-link-icon">✉</span>
+        <div>
+          <div class="contact-link-label">Email</div>
+          <div class="contact-link-val">reminfranklin@gmail.com</div>
+        </div>
+      </a>
+      <a href="tel:+917708833812" class="contact-link">
+        <span class="contact-link-icon">📱</span>
+        <div>
+          <div class="contact-link-label">Mobile</div>
+          <div class="contact-link-val">+91 7708833812</div>
+        </div>
+      </a>
+      <a href="https://linkedin.com/in/remin-franklin-eliyas" target="_blank" class="contact-link">
+        <span class="contact-link-icon">in</span>
+        <div>
+          <div class="contact-link-label">LinkedIn</div>
+          <div class="contact-link-val">remin-franklin-eliyas</div>
+        </div>
+      </a>
+      <a href="https://github.com/remin-franklin-eliyas" target="_blank" class="contact-link">
+        <span class="contact-link-icon">⌥</span>
+        <div>
+          <div class="contact-link-label">GitHub</div>
+          <div class="contact-link-val">remin-franklin-eliyas</div>
+        </div>
+      </a>
+      <a href="https://pypi.org/project/prompthub-cli/" target="_blank" class="contact-link" style="border-color:rgba(55,138,221,0.3)">
+        <span class="contact-link-icon">📦</span>
+        <div>
+          <div class="contact-link-label">Package</div>
+          <div class="contact-link-val" style="color:var(--blue)">pypi.org/project/prompthub-cli</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>Remin Franklin Eliyas — AI Engineer</span>
+  <span class="footer-right">Open to work — Bangalore / Chennai / Remote</span>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
 
